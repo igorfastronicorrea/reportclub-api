@@ -1,6 +1,6 @@
 const mongoose = require('../database');
 
-const TrainingSchema = new mongoose.Schema({
+/*const TrainingSchema = new mongoose.Schema({
     name: {
         type: String,
         require: true
@@ -13,6 +13,18 @@ const TrainingSchema = new mongoose.Schema({
     },
     trainingAudio: {
         type: String,
+    }
+},
+{
+    versionKey: false
+}
+)*/
+const TrainingSchema = new mongoose.Schema({
+    status: {
+        type: String
+    },
+    datetime: {
+        type: String
     }
 },
 {

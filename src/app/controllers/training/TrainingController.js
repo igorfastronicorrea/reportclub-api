@@ -15,7 +15,7 @@ exports.get = async (req, res) => {
 
     try {
         var data = await repository.list();
-        res.status(200).send({training: data});
+        res.status(200).send({monitoring: data});
     } catch (err) {
         res.status(500).send({ "message": "erro" });
     }

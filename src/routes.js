@@ -9,4 +9,7 @@ router.get('/version', (req, res) => res.status(200).send({ version: "0.0.1" }))
 router.post('/training', TrainingController.post);
 router.get('/training', TrainingController.get);
 
+router.post('/monitoring', TrainingController.post)
+router.get('/monitoring', TrainingController.get)
+
 module.exports = router;
