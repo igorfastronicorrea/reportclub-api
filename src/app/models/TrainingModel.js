@@ -1,6 +1,6 @@
 const mongoose = require('../database');
 
-/*const TrainingSchema = new mongoose.Schema({
+const TrainingSchema = new mongoose.Schema({
     name: {
         type: String,
         require: true
@@ -18,8 +18,8 @@ const mongoose = require('../database');
 {
     versionKey: false
 }
-)*/
-const TrainingSchema = new mongoose.Schema({
+)
+/*const TrainingSchema = new mongoose.Schema({
     status: {
         type: String
     },
@@ -30,7 +30,7 @@ const TrainingSchema = new mongoose.Schema({
 {
     versionKey: false
 }
-)
+)*/
 
 const training = mongoose.model('training', TrainingSchema, 'training');
 
