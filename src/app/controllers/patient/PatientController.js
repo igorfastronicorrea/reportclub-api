@@ -1,5 +1,4 @@
-const Fono = require('../../models/FonoModel');
-const repository = require('../../repositores/FonoRespository');
+const repository = require('../../repositores/PatientRespository');
 
 exports.post = async (req, res) => {
 
@@ -9,7 +8,7 @@ exports.post = async (req, res) => {
         if (data != undefined){
             res.status(200).send({ fono: data });
         }else{
-            res.status(500).send({ "message": "error create fono, username already exist" });    
+            res.status(500).send({ "message": "error create patient, username already exist" });    
         }
         
     } catch (err) {

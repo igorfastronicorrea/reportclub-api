@@ -1,20 +1,20 @@
 const mongoose = require('../database');
 
-const FonoSchema = new mongoose.Schema({
+const PatientSchema = new mongoose.Schema({
     name: {
         type: String,
         require: true
     },
-    email: {
-        type: String
-    },
-    telefone: {
+    whatsapp: {
         type: String
     },
     username: {
         type: String
     },
     password: {
+        type: String,
+    },
+    fonoId: {
         type: String,
     }
 },
@@ -23,6 +23,6 @@ const FonoSchema = new mongoose.Schema({
 }
 )
 
-const fono = mongoose.model('fono', FonoSchema, 'fono');
+const patient = mongoose.model('patient', PatientSchema, 'patient');
 
-module.exports = fono;
+module.exports = patient;

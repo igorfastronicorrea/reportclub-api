@@ -3,8 +3,8 @@ const FonoModel = require('../models/FonoModel');
 exports.list = async () => {
 
     try{
-        const fono = await FonoModel.find({});
-    
+        let fono = await FonoModel.find({});
+
         return fono;
     }catch(err){
         return undefined;
@@ -12,12 +12,21 @@ exports.list = async () => {
 
 }
 
-exports.create = async data => {
+exports.find = async data => {
 
     try{
-        const fono = await FonoModel.create(data);
-    
-        return fono;
+
+        let listFono = await FonoModel.find({username: data.username})
+
+        if (listFono.length > 0){
+            return undefined;
+        }else{
+
+            let fono = await FonoModel.create(data);
+
+            return fono;
+        }
+
     }catch(err){
         return undefined;
     }
