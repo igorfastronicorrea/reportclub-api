@@ -1,5 +1,5 @@
 const User = require('../../models/TrainingModel');
-const repository = require('../../repositores/TrainingRespository');
+const repository = require('../../repositores/TrainingRepository');
 
 exports.post = async (req, res) => {
 

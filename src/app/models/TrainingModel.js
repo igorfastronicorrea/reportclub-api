@@ -13,24 +13,25 @@ const TrainingSchema = new mongoose.Schema({
     },
     trainingAudio: {
         type: String,
+    },
+    date: {
+        type: Date
+    },
+    complete: {
+        type: Boolean
+    },
+    fonoId: {
+        type: String
+    },
+    patientId: {
+        type: String
     }
 },
 {
     versionKey: false
 }
 )
-/*const TrainingSchema = new mongoose.Schema({
-    status: {
-        type: String
-    },
-    datetime: {
-        type: String
-    }
-},
-{
-    versionKey: false
-}
-)*/
+
 
 const training = mongoose.model('training', TrainingSchema, 'training');
 
