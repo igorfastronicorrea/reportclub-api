@@ -10,6 +10,7 @@ const AuthPatientController = require('./app/controllers/patient/AuthPatientCont
 const PatientController = require('./app/controllers/patient/PatientController')
 const TrainingListController = require('./app/controllers/patient/TrainingListController')
 const TrainingDetailController = require('./app/controllers/patient/TrainingDetailController')
+const Monitoring = require('./app/controllers/fono/Monitoring')
 
 router.get('/version', (req, res) => res.status(200).send({ version: "0.0.1" }));
 
@@ -28,7 +29,7 @@ router.get('/patient/training/:trainingId', TrainingDetailController.get);
 router.put('/patient/training/:trainingId', TrainingDetailController.put);
 
 
-router.post('/monitoring', TrainingController.post)
+router.post('/monitoring', Monitoring.post)
 router.get('/monitoring', TrainingController.get)
 
 module.exports = router;
