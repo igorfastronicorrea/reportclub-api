@@ -13,7 +13,7 @@ exports.post = async (req, res) => {
         }
         
     } catch (err) {
-        res.status(500).send({ "message": "error create fono" });
+        res.status(500).send({ "message": err });
     }
 }
 
