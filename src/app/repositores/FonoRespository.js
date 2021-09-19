@@ -21,6 +21,24 @@ exports.find = async data => {
         if (listFono.length > 0){
             return undefined;
         }else{
+            return undefined;
+        }
+
+    }catch(err){
+        return undefined;
+    }
+
+}
+
+exports.create = async data => {
+
+    try{
+
+        let listFono = await FonoModel.find({username: data.username})
+
+        if (listFono.length > 0){
+            return undefined;
+        }else{
 
             let fono = await FonoModel.create(data);
 
