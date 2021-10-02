@@ -19,9 +19,9 @@ exports.post = async (req, res) => {
 exports.get = async (req, res) => {
 
     try {
-        var data = await repository.list();
-        res.status(200).send({fono: data});
+        var data = await repository.list(req.query.fonoId);
+        res.status(200).send({patients: data});
     } catch (err) {
-        res.status(500).send({ "message": "error fono list" });
+        res.status(500).send({ "message": "error patients list" });
     }
 }

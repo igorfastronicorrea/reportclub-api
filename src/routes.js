@@ -21,6 +21,7 @@ router.post('/auth/fono', AuthFonoController.post);
 router.post('/training', TrainingController.post);
 router.get('/training', TrainingController.get);
 router.post('/patient', PatientController.post);
+router.get('/patient', PatientController.get);
 
 //MOBILE
 router.post('/auth/patient', AuthPatientController.post);

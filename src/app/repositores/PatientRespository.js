@@ -1,11 +1,12 @@
 const PatientModel = require('../models/PatientModel');
 
-exports.list = async () => {
+exports.list = async data => {
 
     try{
-        let fono = await FonoModel.find({});
+        console.log("FONOID = " + data)
+        let patients = await PatientModel.find({fonoId: data});
 
-        return fono;
+        return patients;
     }catch(err){
         return undefined;
     }
