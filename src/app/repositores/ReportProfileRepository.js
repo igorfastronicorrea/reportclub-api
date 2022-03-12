@@ -1,4 +1,3 @@
-const ProfileModel = require('../models/ProfileModel');
 const ReportModel = require('../models/ReportModel');
 
 
