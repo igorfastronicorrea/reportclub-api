@@ -1,5 +1,4 @@
-const User = require('../../models/TrainingModel');
-const repository = require('../../repositores/TrainingRepository');
+const repository = require('../../repositores/ReportProfileRepository');
 
 exports.post = async (req, res) => {
 
@@ -14,8 +13,8 @@ exports.post = async (req, res) => {
 exports.get = async (req, res) => {
 
     try {
-        var data = await repository.list();
-        res.status(200).send({monitoring: data});
+        var data = await repository.findProfile(req.query.id);
+        res.status(200).send(data);
     } catch (err) {
         res.status(500).send({ "message": "erro" });
     }
